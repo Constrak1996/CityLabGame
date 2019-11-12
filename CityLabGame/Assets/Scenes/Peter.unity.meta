@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:CityLabGame/Assets/Scenes/Peter.unity.meta
 guid: 922941dfa358d6449989c9852b82b1bf
+=======
+guid: 82077624f1e9d4042b455915f8c4a985
+folderAsset: yes
+>>>>>>> 298691d8f9f413b46f67c8dc9dbca6e19f571fdf:CityLabGame/Assets/Assets/Materials/Shaders.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
