@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Grid
-  - BluePlayer
   - RedPlayer
+  - BluePlayer
+  - Grid
   layers:
   - Default
   - TransparentFX
