@@ -49,11 +49,6 @@ public class NameHandlerScript : MonoBehaviour
                 errorText.text = "No special characters please";
             }
 
-            //check if a name like this already exists in the database
-            //----checking will later be sent to server, for the server to check instead
-            //success! add to database
-            //----adding will later be sent to server, for the server to check instead
-
         }
         else
         {
