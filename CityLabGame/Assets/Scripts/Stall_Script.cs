@@ -6,7 +6,8 @@ public class Stall_Script : MonoBehaviour
 {
     [SerializeField]
     private GameObject quizPanel;
-
+    public bool redActivated = true;
+    public bool blueActivated = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +26,6 @@ public class Stall_Script : MonoBehaviour
         if (other.gameObject.tag == "BluePlayer" || other.gameObject.tag == "RedPlayer")
         {
             QuizPOPUp();
-            Debug.Log("Works, triggered");
-            gameObject.GetComponent<Renderer>().material.color = Color.red;
         }
     }
 
@@ -35,8 +34,6 @@ public class Stall_Script : MonoBehaviour
         if (other.gameObject.tag == "BluePlayer" || other.gameObject.tag == "RedPlayer")
         {
             QuizClose();
-            Debug.Log("Works, triggered");
-            gameObject.GetComponent<Renderer>().material.color = Color.white;
         }
     }
 

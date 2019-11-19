@@ -6,19 +6,25 @@ public class PlayerGridCollision : MonoBehaviour
 {
     public GameObject Grid;
     public Material[] material;
-    private GameObject stall;
     private Coloring_Script stallScript;
     private bool waveOfColors = true;
+    private bool redTaken;
+    private bool blueTaken;
     private bool isNeutral;
     private bool isBlue;
     private bool isRed;
 
     private void Start()
     {
-        stall = GameObject.FindGameObjectWithTag("StallColoring").GetComponent<GameObject>();
-        stallScript = stall.GetComponent<Coloring_Script>();
+        stallScript = GetComponent<Coloring_Script>();
         Grid.GetComponent<Renderer>().material = material[2];
         isNeutral = true;
+    }
+
+    private void Update()
+    {
+        //redTaken = stallScript.RedActivated;
+        //blueTaken = stallScript.BlueActivated;
     }
 
     private void OnTriggerEnter(Collider other)
