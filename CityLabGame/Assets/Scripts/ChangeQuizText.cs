@@ -19,7 +19,7 @@ public class ChangeQuizText : MonoBehaviour
         dbconn = (IDbConnection)new SqliteConnection(conn);
         dbconn.Open(); //Open connection to the database.
         IDbCommand dbcmd = dbconn.CreateCommand();
-        
+
             string sqlQuery = "SELECT * " + "FROM questions";  //linjen til hvilken data vi vil tilgå fra hvor
             dbcmd.CommandText = sqlQuery;
             IDataReader reader = dbcmd.ExecuteReader();
@@ -47,8 +47,8 @@ public class ChangeQuizText : MonoBehaviour
                     Button answer3 = GameObject.Find("Canvas/Svar 3").GetComponent<Button>();
                 answer3.onClick.AddListener(Answer3OnClick);
             }
-        
-       
+
+
     }
 
     void Answer1OnClick()
@@ -70,6 +70,6 @@ public class ChangeQuizText : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -6,59 +6,38 @@ public class PlayerGridCollision : MonoBehaviour
 {
     public GameObject Grid;
     public Material[] material;
-    private GameObject stall;
     private Coloring_Script stallScript;
     private bool waveOfColors = true;
+    private bool redTaken;
+    private bool blueTaken;
     private bool isNeutral;
     private bool isBlue;
     private bool isRed;
 
     private void Start()
     {
-        stall = GameObject.FindGameObjectWithTag("StallColoring").GetComponent<GameObject>();
-        stallScript = stall.GetComponent<Coloring_Script>();
+        stallScript = GetComponent<Coloring_Script>();
         Grid.GetComponent<Renderer>().material = material[2];
         isNeutral = true;
     }
 
+    private void Update()
+    {
+        //redTaken = stallScript.RedActivated;
+        //blueTaken = stallScript.BlueActivated;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (isNeutral == true)
-        {
-            if (other.gameObject.tag == "BluePlayer")
-            {
-                Grid.GetComponent<Renderer>().material = material[0];
-                GameBoardStats.blueScore++;
-                isNeutral = false;
-                isBlue = true;
-            }
-
-            if (other.gameObject.tag == "RedPlayer")
-            {
-                Grid.GetComponent<Renderer>().material = material[1];
-                GameBoardStats.redScore++;
-                isNeutral = false;
-                isRed = true;
-            }
-        }
-
-        if (other.gameObject.tag == "BluePlayer" && isRed)
+        if (other.gameObject.tag == "BluePlayer")
         {
             Grid.GetComponent<Renderer>().material = material[0];
-            GameBoardStats.blueScore++;
-            GameBoardStats.redScore--;
-            isRed = false;
         }
 
-        if (other.gameObject.tag == "RedPlayer" && isBlue)
+        if (other.gameObject.tag == "RedPlayer")
         {
             Grid.GetComponent<Renderer>().material = material[1];
-            GameBoardStats.redScore++;
-            GameBoardStats.blueScore--;
-            isBlue = false;
         }
-
-        
     }
 
     private void OnTriggerStay(Collider other)
@@ -79,7 +58,7 @@ public class PlayerGridCollision : MonoBehaviour
             StartCoroutine(WaveOfColorCD());
             waveOfColors = false;
         }
-        
+
     }
 
     private IEnumerator WaveOfColorCD()
