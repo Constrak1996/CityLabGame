@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9671b3ccf0ad3b499e26c5f3d24ed4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 1
 --- !u!4 &486113056
 Transform:
   m_ObjectHideFlags: 0
@@ -476,8 +477,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
@@ -495,7 +496,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530038143}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!114 &530038147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,6 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9671b3ccf0ad3b499e26c5f3d24ed4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 1
 --- !u!1 &688222141
 GameObject:
   m_ObjectHideFlags: 0
