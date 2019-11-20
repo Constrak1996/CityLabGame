@@ -19,7 +19,7 @@ namespace Tests
 
             Assert.IsTrue(player.tag == "RedPlayer");
 
-            yield return new WaitForSeconds(5);
+            yield return null;
         }
 
         [UnityTest]
@@ -31,7 +31,7 @@ namespace Tests
 
             Assert.IsTrue(player.tag == "BluePlayer");
 
-            yield return new WaitForSeconds(5);
+            yield return null;
         }
     }
 }
