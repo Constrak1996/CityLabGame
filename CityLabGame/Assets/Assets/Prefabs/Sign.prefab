@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3930152205321359897}
   - component: {fileID: 8743573406558841568}
   - component: {fileID: 2018776271009791104}
+  - component: {fileID: 492325021}
   m_Layer: 0
   m_Name: AreaCollider
   m_TagString: StallColoring
@@ -61,6 +62,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &492325021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927867543420072461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209ae663422fb134d9b1a1fab20af499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Grid: {fileID: 7872128446164417725, guid: f7f8a18c5ba66bc4c8f0f439597fb655, type: 3}
+  material:
+  - {fileID: 2100000, guid: 508a11e0ec1679d498c892d57005fc15, type: 2}
+  - {fileID: 2100000, guid: e3e21ca995468654489697bce7ea09bf, type: 2}
+  - {fileID: 2100000, guid: 9d04d540eb574b54c8acd0d8e476fb64, type: 2}
+  BlueActivated: 0
+  RedActivated: 1
+  WaveOfColors: 0
 --- !u!1 &4837516892055414590
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,3 +316,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizPanel: {fileID: 0}
+  redActivated: 1
+  blueActivated: 0
