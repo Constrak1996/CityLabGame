@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mono.Data.Sqlite;
 using System.Data;
+using System.Text;
 
 public class ChangeQuizText : MonoBehaviour
 {
     bool answer = false;
     [SerializeField]
     int number;
+
+    static Encoding enc32 = Encoding.UTF32;
 
     // Start is called before the first frame update
     void Start()
@@ -26,11 +29,14 @@ public class ChangeQuizText : MonoBehaviour
             while (reader.Read())
             {
 
-          string question = reader.GetString(0);
+            string question = reader.GetString(0);
+            byte[] questionByte = enc32.GetBytes(question);
+            question = Encoding.UTF32.GetString(questionByte);
+
+
             string inccorect_one = reader.GetString(1);
             string inccorect_two = reader.GetString(2);
             string correct = reader.GetString(3);
-            
 
             Debug.Log(question);
 
