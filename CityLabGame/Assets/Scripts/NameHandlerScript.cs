@@ -27,8 +27,6 @@ public class NameHandlerScript : MonoBehaviour
     [SerializeField]
     Text errorText;
 
-    public static string ChoName { get; private set; }
-
 
 
 
@@ -44,7 +42,7 @@ public class NameHandlerScript : MonoBehaviour
                 string name = CurseChecker(nickName.text);  //CurseChecker is the profanity filter, so after this, just send "name" wherever you want it xD
                 errorText.text = name;  //irrelevant, just using it to check if it works xD
                 //save 'name' somewhere
-                SceneManager.LoadScene("AlexF-Scene");
+                //SceneManager.LoadScene(WhateverSceneIsNext);
             }
             else
             {
@@ -63,31 +61,21 @@ public class NameHandlerScript : MonoBehaviour
         
         string CurseChecker(string str)
         {
-            ChoName = str;
+            string choName = str;
 
             string[] matches = Regex.Split(txt.text, "\r\n?|\n", RegexOptions.Singleline);
 
             foreach (string word in matches)
             {
-                Match mash = Regex.Match(ChoName, word, RegexOptions.IgnoreCase);
+                Match mash = Regex.Match(choName, word, RegexOptions.IgnoreCase);
                 if (mash.Success)
                 {
-                    ChoName = Regex.Replace(ChoName, word, "***", RegexOptions.IgnoreCase);
+                    choName = Regex.Replace(choName, word, "***", RegexOptions.IgnoreCase);
                 }
             }
 
-            return ChoName;
+            return choName;
         }
 
-
-        #region CodeForAnother
-        //[SerializeField]
-        //Text nameTxt;
-
-        //void Start()
-        //{
-        //    nameTxt.text = NameHandlerScript.ChoName;
-        //}
-        #endregion
     }
 }

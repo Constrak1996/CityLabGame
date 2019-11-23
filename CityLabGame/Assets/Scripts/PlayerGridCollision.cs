@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerGridCollision : MonoBehaviour
 {
     public GameObject Grid;
-    private GameObject stall;
     public Material[] material;
     private Coloring_Script stallScript;
     private bool waveOfColors = true;
@@ -17,19 +16,15 @@ public class PlayerGridCollision : MonoBehaviour
 
     private void Start()
     {
-        stall = GameObject.FindGameObjectWithTag("StallColoring");
+        stallScript = GetComponent<Coloring_Script>();
         Grid.GetComponent<Renderer>().material = material[2];
         isNeutral = true;
     }
 
     private void Update()
     {
-        Coloring_Script stallColoring = stall.GetComponent<Coloring_Script>();
-        if (stallColoring != null)
-        {
-            redTaken = stallColoring.RedActivated;
-            blueTaken = stallColoring.BlueActivated;
-        }
+        //redTaken = stallScript.RedActivated;
+        //blueTaken = stallScript.BlueActivated;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,15 +44,15 @@ public class PlayerGridCollision : MonoBehaviour
     {
         if (waveOfColors == true)
         {
-            if (other.gameObject.tag == "StallColoring" && blueTaken == true)
+            if (other.gameObject.tag == "StallColoring")
             {
-                Debug.Log("Colliding, Blue (Grid)");
+                Debug.Log("Colliding, Red (Grid)");
                 Grid.GetComponent<Renderer>().material = material[0];
             }
 
-            if (other.gameObject.tag == "StallColoring" && redTaken == true)
+            if (other.gameObject.tag == "StallColoring")
             {
-                Debug.Log("Colliding, Red (Grid)");
+                Debug.Log("Colliding, Blue (Grid)");
                 Grid.GetComponent<Renderer>().material = material[1];
             }
             StartCoroutine(WaveOfColorCD());
