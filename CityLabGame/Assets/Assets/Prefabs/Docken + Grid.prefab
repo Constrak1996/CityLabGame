@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 549314830603926992, guid: 7a930b08ed9f0224d9628508a2ed037c,
         type: 3}
       propertyPath: m_Name
-      value: Docken + Grid Variant Variant 1
+      value: Docken + Grid
       objectReference: {fileID: 0}
     - target: {fileID: 3586227828000477123, guid: 7a930b08ed9f0224d9628508a2ed037c,
         type: 3}
@@ -71,6 +71,11 @@ PrefabInstance:
         type: 3}
       propertyPath: quizPanel
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282692571922780078, guid: 7a930b08ed9f0224d9628508a2ed037c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 218.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a930b08ed9f0224d9628508a2ed037c, type: 3}
