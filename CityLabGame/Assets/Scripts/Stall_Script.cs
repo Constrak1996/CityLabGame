@@ -11,7 +11,7 @@ public class Stall_Script : MonoBehaviour
     public bool redActivated = true;
     public bool blueActivated = false;
     private bool quizIsDown;
-    
+
     // Start is called before the first frame update
     void Start()
     {
