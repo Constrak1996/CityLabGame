@@ -51,13 +51,13 @@ public class PlayerGridCollision : MonoBehaviour
         {
             if (other.gameObject.tag == "StallColoring" && blueTaken == true)
             {
-                Debug.Log("Colliding, Red (Grid)");
+                Debug.Log("Colliding, Blue (Grid)");
                 Grid.GetComponent<Renderer>().material = material[0];
             }
 
             if (other.gameObject.tag == "StallColoring" && redTaken == true)
             {
-                Debug.Log("Colliding, Blue (Grid)");
+                Debug.Log("Colliding, Red (Grid)");
                 Grid.GetComponent<Renderer>().material = material[1];
             }
             StartCoroutine(WaveOfColorCD());
