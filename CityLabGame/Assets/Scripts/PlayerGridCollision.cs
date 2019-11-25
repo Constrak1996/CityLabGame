@@ -27,11 +27,11 @@ public class PlayerGridCollision : MonoBehaviour
 
     private void Update()
     {
-        Coloring_Script stallColoring = stall.GetComponent<Coloring_Script>();
-        if (stallColoring != null)
+        stallScript = stall.gameObject.GetComponent<Coloring_Script>();
+        if (stallScript != null)
         {
-            redTaken = stallColoring.RedActivated;
-            blueTaken = stallColoring.BlueActivated;
+            redTaken = stallScript.RedActivated;
+            blueTaken = stallScript.BlueActivated;
         }
     }
 

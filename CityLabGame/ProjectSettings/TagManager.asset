@@ -9,6 +9,7 @@ TagManager:
   - Grid
   - Stall
   - StallColoring
+  - Quiz
   layers:
   - Default
   - TransparentFX

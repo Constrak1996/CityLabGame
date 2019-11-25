@@ -280,11 +280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6994674785720411354, guid: 71e0455fd9a982044ae3ff10c4e8184b,
-        type: 3}
-      propertyPath: m_Name
-      value: Docken + Grid Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 6289640201336248009, guid: 71e0455fd9a982044ae3ff10c4e8184b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -339,6 +334,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994674785720411354, guid: 71e0455fd9a982044ae3ff10c4e8184b,
+        type: 3}
+      propertyPath: m_Name
+      value: Docken + Grid Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994674785720411354, guid: 71e0455fd9a982044ae3ff10c4e8184b,
+        type: 3}
+      propertyPath: m_TagString
+      value: StallColoring
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71e0455fd9a982044ae3ff10c4e8184b, type: 3}
