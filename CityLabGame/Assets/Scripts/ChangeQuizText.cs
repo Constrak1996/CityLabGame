@@ -28,7 +28,7 @@ public class ChangeQuizText : MonoBehaviour
         IDbCommand dbcmd = dbconn.CreateCommand();
 
         string sqlQueryQuestion = $"SELECT Questions.question_text, Answer_incorrect.answer_text_one, Answer_incorrect.answer_text_two, Answer_correct.answer_text FROM Questions,Answer_incorrect, Answer_correct  WHERE QID = {number} AND IID = {number} AND CID = {number};"; //WHERE QID =" + number; 
-        dbcmd.CommandText = sqlQueryQuestion;  
+        dbcmd.CommandText = sqlQueryQuestion;
         IDataReader reader = dbcmd.ExecuteReader();
             while (reader.Read())
             {
