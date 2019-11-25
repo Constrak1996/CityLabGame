@@ -118,7 +118,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1033544103}
+      - m_Target: {fileID: 560322361}
         m_MethodName: Answer2OnClick
         m_Mode: 1
         m_Arguments:
@@ -371,13 +371,14 @@ GameObject:
   - component: {fileID: 2833139027522303369}
   - component: {fileID: 2833139027522303371}
   - component: {fileID: 2833139027522303370}
+  - component: {fileID: 560322361}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2833139027522303369
 RectTransform:
   m_ObjectHideFlags: 0
@@ -437,6 +438,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &560322361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833139027522303368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9671b3ccf0ad3b499e26c5f3d24ed4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answer: 0
+  quiz: {fileID: 2833139027522303368}
 --- !u!1 &2833139027655272206
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +464,6 @@ GameObject:
   - component: {fileID: 2833139027655272193}
   - component: {fileID: 2833139027655272192}
   - component: {fileID: 2833139027655272207}
-  - component: {fileID: 1033544103}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -537,20 +551,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1033544103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2833139027655272206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9671b3ccf0ad3b499e26c5f3d24ed4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  answer: 0
-  quiz: {fileID: 2833139027522303368}
 --- !u!1 &2833139027709045604
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1033544103}
+      - m_Target: {fileID: 560322361}
         m_MethodName: Answer3OnClick
         m_Mode: 1
         m_Arguments:
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1033544103}
+      - m_Target: {fileID: 560322361}
         m_MethodName: Answer1OnClick
         m_Mode: 1
         m_Arguments:
