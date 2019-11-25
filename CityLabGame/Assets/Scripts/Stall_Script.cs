@@ -5,33 +5,33 @@ using UnityEngine;
 public class Stall_Script : MonoBehaviour
 {
     private GameObject quizPanel;
+    private GameObject[] childForCanvas;
     private ChangeQuizText quizScript;
     private GameObject quiz;
     public bool redActivated = true;
     public bool blueActivated = false;
     private bool quizIsDown;
-    public int number;
 
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
+        quizPanel = GameObject.Find("Panel");
+        quizPanel.SetActive(false);
+=======
         quizPanel = GameObject.Find("Canvas/Panel");
+>>>>>>> 7fcdaec0b20db253d2c10315b412f01362ca91d4
         quiz = GameObject.FindGameObjectWithTag("Quiz");
     }
 
     // Update is called once per frame
     void Update()
     {
-        quizScript = quiz.gameObject.GetComponent<ChangeQuizText>();
-        if (quizScript != null)
-        {
-            quizIsDown = quizScript.answer;
-        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "BluePlayer" && quizIsDown == false || other.gameObject.tag == "RedPlayer" && quizIsDown == false)
+        if (other.gameObject.tag == "BluePlayer"|| other.gameObject.tag == "RedPlayer")
         {
             QuizPOPUp();
         }
