@@ -42,9 +42,9 @@ public class NameHandlerScript : MonoBehaviour
             if (rgx.IsMatch(nickName.text))
             {
                 string name = CurseChecker(nickName.text);  //CurseChecker is the profanity filter, so after this, just send "name" wherever you want it xD
-                errorText.text = name;  //irrelevant, just using it to check if it works xD
+                //errorText.text = name;  //irrelevant, just using it to check if it works xD
                 //save 'name' somewhere
-                SceneManager.LoadScene("AlexF-Scene");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             else
             {
@@ -78,16 +78,5 @@ public class NameHandlerScript : MonoBehaviour
 
             return ChoName;
         }
-
-
-        #region CodeForAnother
-        //[SerializeField]
-        //Text nameTxt;
-
-        //void Start()
-        //{
-        //    nameTxt.text = NameHandlerScript.ChoName;
-        //}
-        #endregion
     }
 }
