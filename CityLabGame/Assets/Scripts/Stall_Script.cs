@@ -15,7 +15,7 @@ public class Stall_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        quizPanel = GameObject.Find("Panel");
+        quizPanel = GameObject.Find("Canvas/Panel");
         quiz = GameObject.FindGameObjectWithTag("Quiz");
         StartCoroutine(Remove());
     }
