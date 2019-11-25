@@ -8,15 +8,19 @@ using System.Text;
 
 public class ChangeQuizText : MonoBehaviour
 {
-    bool answer = false;
-    [SerializeField]
+    public bool answer = false;
     int number;
+    private GameObject stall;
+    [SerializeField]
+    private GameObject quiz;
+    private Stall_Script stallScript;
 
     static Encoding enc32 = Encoding.UTF32;
 
     // Start is called before the first frame update
     void Start()
     {
+        stall = GameObject.FindGameObjectWithTag("Stall");
         string conn = "URI=file:" + Application.dataPath + "/Database.s3db"; //Path to database.
         IDbConnection dbconn;
         dbconn = (IDbConnection)new SqliteConnection(conn);
@@ -40,36 +44,37 @@ public class ChangeQuizText : MonoBehaviour
 
             Debug.Log(question);
 
-                Text quizText = GameObject.Find("Canvas/Quiz Spørgsmål").GetComponent<Text>();
+                Text quizText = GameObject.Find("Canvas/Panel/Quiz Spørgsmål").GetComponent<Text>();
                 quizText.text = question;
-            Text answerText1 = GameObject.Find("Canvas/Svar 1/Text").GetComponent<Text>();
+            Text answerText1 = GameObject.Find("Canvas/Panel/Svar 1/Text").GetComponent<Text>();
             answerText1.text = correct;
-            Button answer1 = GameObject.Find("Canvas/Svar 1").GetComponent<Button>();
+            Button answer1 = GameObject.Find("Canvas/Panel/Svar 1").GetComponent<Button>();
             answer1.onClick.AddListener(Answer1OnClick);
-            Text answerText2 = GameObject.Find("Canvas/Svar 2/Text").GetComponent<Text>();
+            Text answerText2 = GameObject.Find("Canvas/Panel/Svar 2/Text").GetComponent<Text>();
             answerText2.text = inccorect_one;
-            Button answer2 = GameObject.Find("Canvas/Svar 2").GetComponent<Button>();
+            Button answer2 = GameObject.Find("Canvas/Panel/Svar 2").GetComponent<Button>();
             answer2.onClick.AddListener(Answer2OnClick);
-            Text answerText3 = GameObject.Find("Canvas/Svar 3/Text").GetComponent<Text>();
+            Text answerText3 = GameObject.Find("Canvas/Panel/Svar 3/Text").GetComponent<Text>();
             answerText3.text = inccorect_two;
-            Button answer3 = GameObject.Find("Canvas/Svar 3").GetComponent<Button>();
+            Button answer3 = GameObject.Find("Canvas/Panel/Svar 3").GetComponent<Button>();
             answer3.onClick.AddListener(Answer3OnClick);
 
 
         }
     }
 
-    void Answer1OnClick()
+    public void Answer1OnClick()
     {
         answer = true;
         Debug.Log("you answer is " + answer);
+        StartCoroutine(CD());
     }
-    void Answer2OnClick()
+    public void Answer2OnClick()
     {
         answer = false;
         Debug.Log("You answer is " + answer);
     }
-    void Answer3OnClick()
+    public void Answer3OnClick()
     {
         answer = false;
         Debug.Log("You answer is " + answer);
@@ -78,6 +83,22 @@ public class ChangeQuizText : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+        if (answer == true)
+        {
+            quiz.SetActive(false);
+            StartCoroutine(CD());
+        }
+        stallScript = stall.gameObject.GetComponent<Stall_Script>();
 
+        if (stallScript != null && quiz.activeSelf == true)
+        {
+            number = stallScript.number;
+        }
+    }
+
+    IEnumerator CD()
+    {
+        yield return new WaitForSeconds(15f);
+        answer = false;
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerGridCollision : MonoBehaviour
 {
     public GameObject Grid;
+    private GameObject stall;
     public Material[] material;
     private Coloring_Script stallScript;
     private bool waveOfColors = true;
@@ -16,15 +17,19 @@ public class PlayerGridCollision : MonoBehaviour
 
     private void Start()
     {
-        stallScript = GetComponent<Coloring_Script>();
+        stall = GameObject.FindGameObjectWithTag("StallColoring");
         Grid.GetComponent<Renderer>().material = material[2];
         isNeutral = true;
     }
 
     private void Update()
     {
-        //redTaken = stallScript.RedActivated;
-        //blueTaken = stallScript.BlueActivated;
+        stallScript = stall.gameObject.GetComponent<Coloring_Script>();
+        if (stallScript != null)
+        {
+            redTaken = stallScript.RedActivated;
+            blueTaken = stallScript.BlueActivated;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,13 +49,13 @@ public class PlayerGridCollision : MonoBehaviour
     {
         if (waveOfColors == true)
         {
-            if (other.gameObject.tag == "StallColoring")
+            if (other.gameObject.tag == "StallColoring" && blueTaken == true)
             {
                 Debug.Log("Colliding, Red (Grid)");
                 Grid.GetComponent<Renderer>().material = material[0];
             }
 
-            if (other.gameObject.tag == "StallColoring")
+            if (other.gameObject.tag == "StallColoring" && redTaken == true)
             {
                 Debug.Log("Colliding, Blue (Grid)");
                 Grid.GetComponent<Renderer>().material = material[1];
