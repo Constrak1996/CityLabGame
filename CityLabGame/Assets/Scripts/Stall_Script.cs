@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Stall_Script : MonoBehaviour
 {
-    [SerializeField]
     private GameObject quizPanel;
     private ChangeQuizText quizScript;
     private GameObject quiz;
@@ -16,6 +15,7 @@ public class Stall_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        quizPanel = GameObject.Find("Canvas/Panel");
         quiz = GameObject.FindGameObjectWithTag("Quiz");
     }
 
