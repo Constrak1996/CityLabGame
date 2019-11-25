@@ -15,6 +15,9 @@ public class PlayerGridCollision : MonoBehaviour
     private bool isBlue;
     private bool isRed;
 
+    public static int redScore;
+    public static int blueScore;
+
     private void Start()
     {
         stall = GameObject.FindGameObjectWithTag("StallColoring");
@@ -34,14 +37,48 @@ public class PlayerGridCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "BluePlayer")
+        //If grid is neutral and collide with blueplayer
+        if (other.gameObject.tag == "BluePlayer" && isNeutral)
         {
             Grid.GetComponent<Renderer>().material = material[0];
+
+            blueScore += 1;
+            isNeutral = false;
+            isBlue = true;
+            isRed = false;
         }
 
-        if (other.gameObject.tag == "RedPlayer")
+        //If grid is neutral and collide with redplayer
+        if (other.gameObject.tag == "RedPlayer" && isNeutral)
         {
             Grid.GetComponent<Renderer>().material = material[1];
+
+            redScore += 1;
+            isNeutral = false;
+            isRed = true;
+            isBlue = false;
+        }
+
+        //if grid is red and colliding with blueplayer
+        if (other.gameObject.tag == "BluePlayer" && isRed)
+        {
+            Grid.GetComponent<Renderer>().material = material[0];
+
+            redScore -= 1;
+            blueScore += 1;
+            isBlue = true;
+            isRed = false;
+        }
+
+        //if grid is blue and colliding with redplayer
+        if (other.gameObject.tag == "RedPlayer" && isBlue)
+        {
+            Grid.GetComponent<Renderer>().material = material[1];
+            
+            redScore += 1;
+            blueScore -= 1;
+            isBlue = false;
+            isRed = true;
         }
     }
 
