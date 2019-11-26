@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -415,7 +415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489858344}
   m_LocalRotation: {x: 0.67899805, y: 0.041535877, z: -0.13545994, w: 0.72033817}
-  m_LocalPosition: {x: 3.26, y: 10.24, z: 1.69}
+  m_LocalPosition: {x: 4.73, y: 21.93, z: 0.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1104304737}
@@ -495,7 +495,7 @@ PrefabInstance:
     - target: {fileID: 6357137324655310673, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.315
+      value: 7.85
       objectReference: {fileID: 0}
     - target: {fileID: 4886150424162858, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -541,6 +541,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4886150424162858, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886150424162858, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886150424162858, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114668955501623132, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 3}
       propertyPath: m_Enabled
@@ -567,7 +579,7 @@ PrefabInstance:
     - target: {fileID: 114140835023345716, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4961856903295740, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -576,6 +588,18 @@ PrefabInstance:
     - target: {fileID: 4961856903295740, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961856903295740, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961856903295740, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961856903295740, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 3}
@@ -837,7 +861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 2048033863}
   _locationStrings:
-  - 56.157227, 10.213990
+  - 56.157883, 10.215050
   _spawnScale: 0.03
-  _markerPrefab: {fileID: 3065062268925334615, guid: d14d3ac1fa33f794485f7d508c00e077,
+  _markerPrefab: {fileID: 549314830603926992, guid: 7a930b08ed9f0224d9628508a2ed037c,
     type: 3}
