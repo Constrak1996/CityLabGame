@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Docken + Grid
       objectReference: {fileID: 0}
+    - target: {fileID: 549314830603926992, guid: 7a930b08ed9f0224d9628508a2ed037c,
+        type: 3}
+      propertyPath: m_TagString
+      value: StallColoring
+      objectReference: {fileID: 0}
     - target: {fileID: 3586227828000477123, guid: 7a930b08ed9f0224d9628508a2ed037c,
         type: 3}
       propertyPath: m_LocalPosition.x
