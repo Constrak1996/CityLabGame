@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 8361213fe00f2774c9cbb302b3a51818,
         type: 3}
       propertyPath: m_Name
-      value: Docken + Grid
+      value: Docken + Grid Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8361213fe00f2774c9cbb302b3a51818,
+        type: 3}
+      propertyPath: m_TagString
+      value: StallColoring
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8361213fe00f2774c9cbb302b3a51818,
         type: 3}
