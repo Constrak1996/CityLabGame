@@ -6,7 +6,6 @@ public class Stall_Script : MonoBehaviour
 {
     private GameObject quizPanel;
     private GameObject[] childForCanvas;
-    private ChangeQuizText quizScript;
     private GameObject quiz;
     public bool redActivated = true;
     public bool blueActivated = false;

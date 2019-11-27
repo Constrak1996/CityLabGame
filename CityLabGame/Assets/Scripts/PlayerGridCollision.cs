@@ -9,7 +9,9 @@ public class PlayerGridCollision : MonoBehaviour
     public Material[] material;
     private Coloring_Script stallScript;
     private bool waveOfColors = true;
+    [SerializeField]
     private bool redTaken;
+    [SerializeField]
     private bool blueTaken;
     private bool isNeutral;
     private bool isBlue;

@@ -33,7 +33,7 @@ public class ChangeQuizText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        number = Random.Range(0, 10);
+        number = Random.Range(1, 10);
         stall = GameObject.FindGameObjectWithTag("Stall");
         string conn = "URI=file:" + Application.dataPath + "/Database.s3db"; //Path to database.
         dbconn = (IDbConnection)new SqliteConnection(conn);
@@ -52,6 +52,7 @@ public class ChangeQuizText : MonoBehaviour
         answer = true;
         Debug.Log("you answer is " + answer);
         number = Random.Range(1, 10);
+        StartCoroutine(CD());
         quiz.SetActive(false);
     }
     public void Answer2OnClick()
@@ -118,9 +119,9 @@ public class ChangeQuizText : MonoBehaviour
         //}
     }
 
-    //IEnumerator CD()
-    //{
-    //    yield return new WaitForSeconds(15f);
-    //    answer = false;
-    //}
+    IEnumerator CD()
+    {
+        yield return new WaitForSeconds(15f);
+        answer = false;
+    }
 }
